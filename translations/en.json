@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "EVO Inverter — connection method",
+        "data": {
+          "mode": "How is the inverter connected?"
+        }
+      },
+      "serial": {
+        "title": "EVO Inverter — Serial (USB-RS232/RS485, direct)",
+        "data": {
+          "serial_port": "Serial device path",
+          "baudrate": "Baud rate",
+          "parity": "Parity",
+          "stopbits": "Stop bits",
+          "bytesize": "Byte size",
+          "slave_id": "Modbus slave ID",
+          "scan_interval": "Update interval (seconds)"
+        }
+      },
+      "uart_tcp": {
+        "title": "EVO Inverter — UART-TCP bridge (esphome-uart-link / ser2net)",
+        "description": "For an ESP32 running esphome-uart-link's uart_tcp_server, or any ser2net-style raw serial-to-TCP bridge. The bytes are still real Modbus RTU frames with CRC16 - only the transport changed.",
+        "data": {
+          "host": "Host / IP address",
+          "port": "TCP port",
+          "slave_id": "Modbus slave ID",
+          "scan_interval": "Update interval (seconds)"
+        }
+      },
+      "modbus_tcp": {
+        "title": "EVO Inverter — Modbus TCP gateway (native)",
+        "description": "For a device that natively speaks Modbus TCP (e.g. a commercial RS485-to-Ethernet Modbus gateway that repackages frames itself).",
+        "data": {
+          "host": "Host / IP address",
+          "port": "TCP port",
+          "slave_id": "Modbus slave ID",
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect or read AC Voltage register (4502) — check wiring/host, port, baud rate, framing and slave ID."
+    }
+  }
+}

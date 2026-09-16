@@ -1,0 +1,11 @@
+{
+  "domain": "evo_inverter",
+  "name": "EVO Inverter (PowMr/Must-style Modbus)",
+  "version": "0.2.0",
+  "documentation": "https://github.com/",
+  "issue_tracker": "https://github.com/",
+  "codeowners": [],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "requirements": ["pyserial-asyncio-fast==0.16"]
+}

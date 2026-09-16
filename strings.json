@@ -1,0 +1,51 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "EVO Inverter — kiểu kết nối",
+        "data": {
+          "connection_type": "Biến tần kết nối kiểu gì?"
+        }
+      },
+      "tcp": {
+        "title": "EVO Inverter — ESP32 TCP bridge",
+        "data": {
+          "host": "Địa chỉ IP / hostname ESP32",
+          "port": "TCP port",
+          "slave_id": "Modbus slave ID",
+          "scan_interval": "Chu kỳ cập nhật (giây)"
+        }
+      },
+      "serial": {
+        "title": "EVO Inverter — RS232/RS485-USB trực tiếp",
+        "data": {
+          "serial_port": "Đường dẫn cổng serial",
+          "baud_rate": "Baud rate",
+          "data_bits": "Data bits",
+          "parity": "Parity",
+          "stop_bits": "Stop bits",
+          "slave_id": "Modbus slave ID",
+          "scan_interval": "Chu kỳ cập nhật (giây)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Không kết nối hoặc không đọc được thanh ghi AC Voltage (4502) — kiểm tra wiring/host, port, baud rate, parity và slave ID."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "serial_port": "Đường dẫn cổng serial",
+          "baud_rate": "Baud rate",
+          "data_bits": "Data bits",
+          "parity": "Parity",
+          "stop_bits": "Stop bits",
+          "slave_id": "Modbus slave ID",
+          "scan_interval": "Chu kỳ cập nhật (giây)"
+        }
+      }
+    }
+  }
+}
